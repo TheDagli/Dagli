@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<addon id="resource.PlayStation_UI_Sounds" version="9.0.0" name="PlayStation 4 - UI Sounds" provider-name="Dagli">
+  <requires>
+    <import addon="kodi.resource" version="1.0.0"/>
+  </requires>
+  <extension point="kodi.resource.uisounds"/>
+  <extension point="kodi.addon.metadata">
+    <summary lang="de">PlayStation 4 - UI Sounds</summary>
+    <description lang="de">UI Sounds for PlayStation 4</description>
+    <platform>all</platform>
+  </extension>
+</addon>
