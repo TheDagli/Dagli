@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addons>
+<addon id="plugin.video.filme" name="Filme" version="3.5.21" provider-name="Dagli">
+ <requires>
+   <!-- <import addon="xbmc.python" version="3.0.0"/> -->
+   <import addon="repository.dagli"/>
+   <import addon="script.module.urlresolver"/>
+   <import addon="script.module.six" version="1.11.0"/>
+   <import addon="script.module.inputstreamhelper" version="0.3.3" optional="true"/>
+   <import addon="script.module.requests"/>
+ </requires>
+ <extension point="xbmc.python.pluginsource" library="default.py">
+   <provides>video</provides>
+ </extension>
+ <extension point="xbmc.addon.metadata">
+   <summary lang="de">Schau dir Filme an!</summary>
+   <description lang="de">Mit diesem Addon kannst du auf alle angebotenen Streams verschiedenster deutschen Quellen zugreifen</description>
+   <disclaimer lang="de">Die von diesem Addon dargestellten Inhalte werden von den Erstellern des Addons weder gehostet oder verbreitet, noch stehen die Ersteller in irgendeiner Beziehung zu den Content-Anbietern.</disclaimer>
+   <source>https://github.com/TheDagli/PlayStation-4/tree/PS4/plugin.video.filme</source>
+   <license>GNU GENERAL PUBLIC LICENSE V3</license>
+   <platform>all</platform>
+   <assets>
+     <icon>icon.png</icon>
+     <fanart>fanart.jpg</fanart>
+   </assets>
+ </extension>
+</addon>
+
+<addon id="script.module.urlresolver" name="URLResolver" version="2021.03.09" provider-name="Resolver Team">
+    <requires>
+        <!-- <import addon="xbmc.python" version="3.0.0" /> -->
+        <import addon="script.module.six" version="1.11.0"/>
+        <import addon="script.module.kodi-six" />
+        <import addon="plugin.video.youtube" optional="true" />
+        <import addon="script.module.python.twitch" optional="true" />
+        <import addon="script.module.cryptopy" version="1.2.6" optional="true" />
+        <import addon="plugin.video.gdrive" optional="true" />
+    </requires>
+    <extension point="xbmc.python.module" library="lib" />
+    <extension point="xbmc.python.pluginsource" library="lib/default.py" />
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <summary lang="de">URLResolver wird für die Stream Wiedergabe benötigt</summary>
+        <description lang="de">Empfängt viele Video URL's, die in XBMC/Kodi abspielbar sind</description>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+    </extension>
+</addon>
+
+<addon id="script.module.archive_tool" name="archive_tool" provider-name="Dagli" version="2.0.2">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0"/>
+    <import addon="vfs.libarchive"/>
+    <import addon="vfs.rar" optional="true"/>
+  </requires>
+  <extension point="xbmc.python.module" library="lib" />
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">Python class for working with file archives</summary>
+    <description lang="en">archive_tool is a set of common tools to work with the Kodi libarchive virtual file system</description>
+    <platform>all</platform>
+    <assets>
+      <icon>icon.png</icon>
+      <fanart>fanart.jpg</fanart>
+    </assets>
+    <license>GNU GENERAL PUBLIC LICENSE V3</license>
+  </extension>
+</addon>
+
+<addon id="plugin.program.retrobiostool" name="PS Store - Plugin" version="0.5">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0"/>
+    <import addon="script.module.kodi-six"/>
+    <import addon="script.module.requests"/>
+    <import addon="script.module.routing"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="retrobiostool.py">
+    <provides>executable</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+  <!-- <reuselanguageinvoker>false</reuselanguageinvoker> -->
+    <platform>all</platform>
+    <summary lang="de_DE">PS Store - Plugin</summary>
+    <description lang="de_DE">PlayStation Store - Plugin</description>
+    <license>GNU General Public License v3.0</license>
+    <source>https://github.com/TheDagli/PlayStation-4/tree/PS4/plugin.program.retrobiostool</source>
+    <assets>
+      <icon>icon.png</icon>
+      <fanart>fanart.jpg</fanart>
+    </assets>
+  </extension>
+</addon>
+
+<addon id="resource.PlayStation_UI_Sounds" version="9.0.0" name="PlayStation 4 - UI Sounds" provider-name="Dagli">
+  <requires>
+    <import addon="kodi.resource" version="1.0.0"/>
+  </requires>
+  <extension>
+	<provides>uisounds</provides>
+  </extension>
+  <extension point="kodi.resource.uisounds"/>
+  <extension point="kodi.addon.metadata">
+  </extension>
+</addon>
+
+<addon id="resource.PlayStation_UI_Sounds" version="9.0.0" name="PlayStation 4 - UI Sounds" provider-name="Dagli">
+  <requires>
+    <import addon="kodi.resource" version="1.0.0"/>
+  </requires>
+  <extension point="kodi.resource.uisounds"/>
+  <extension point="kodi.addon.metadata">
+    <summary lang="de">PlayStation 4 - UI Sounds</summary>
+    <description lang="de">UI Sounds for PlayStation 4</description>
+    <platform>all</platform>
+	<license>CC BY-SA 4.0, GNU GENERAL PUBLIC LICENSE Version 2.0</license>
+    <source>https://github.com/TheDagli/PlayStation-4/tree/PS4/plugin.program.spiele</source>
+	<assets>
+      <icon>icon.png</icon>
+      <fanart>fanart.jpg</fanart>
+    </assets>
+  </extension>
+</addon>
+
+<addon id="plugin.program.spiele" name="PlayStation Store" version="3.0.2">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0"/>
+    <import addon="script.module.dateutil"/>
+    <import addon="script.module.requests"/>
+    <import addon="script.module.routing"/>
+    <import addon="script.module.archive_tool" version="2.0.2"/>
+    <import addon="plugin.video.youtube" version="6.8.7"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="addon.py">
+    <provides>game</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <summary lang="de_DE">PlayStation Store</summary>
+    <description lang="de_DE">PSOne Spiele</description>
+    <license>CC BY-SA 4.0, GNU GENERAL PUBLIC LICENSE Version 2.0</license>
+    <source>https://github.com/TheDagli/PlayStation-4/tree/PS4/plugin.program.spiele</source>
+    <assets>
+      <icon>icon.png</icon>
+      <fanart>fanart.jpg</fanart>
+    </assets>
+  </extension>
+</addon>
+</addons>
