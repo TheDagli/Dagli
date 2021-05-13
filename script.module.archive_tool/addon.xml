@@ -8,12 +8,11 @@
   <extension point="xbmc.python.module" library="lib" />
   <extension point="xbmc.addon.metadata">
     <summary lang="en">Python class for working with file archives</summary>
-    <description lang="en">archive_tool is a set of common tools to work with the Kodi libarchive virtual file system</description>
+    <description lang="en"></description>
     <platform>all</platform>
     <assets>
       <icon>icon.png</icon>
-      <fanart>fanart.jpg</fanart>
+	  <fanart>fanart.png</fanart>
     </assets>
-    <license>GNU GENERAL PUBLIC LICENSE V3</license>
   </extension>
 </addon>
