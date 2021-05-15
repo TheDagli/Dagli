@@ -1,0 +1,6 @@
+Spiele Change Log
+
+3.0.2
+Bug fixes reported from users
+Added Netplay functionality for external launcher users
+Updated/Fixed spiele favorites and Search and Random functions
